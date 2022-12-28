@@ -23,21 +23,38 @@ enum types{
     BOOLEAN,
     CHAR,
     VOID,
-    VAR,
-    STATIC,
-    FIELD,
-    ARG,
     LET,
     DO,
     IF,
     ELSE,
     WHILE,
     RETURN,
+    
     __TRUE__,   // _'s have been added as these terms are already in use.
     __FALSE__,
     __NULL__,
+    
+    CONST,
+    TEMP,
+    VAR,
+    STATIC,
+    FIELD,
+    LOCAL,
+    ARG,
     THIS,
+    THAT,
+    POINTER,
     NONE,
+    
+    ADD,
+    SUB,
+    NEG,
+    EQ,
+    GT,
+    LT,
+    AND,
+    OR,
+    NOT,
     
     INVALID
 };
