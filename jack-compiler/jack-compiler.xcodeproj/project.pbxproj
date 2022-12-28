@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE417946295CC69A00D2099F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE417945295CC69A00D2099F /* main.cpp */; };
+		EE417951295CC72D00D2099F /* symbol-table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE41794F295CC72D00D2099F /* symbol-table.cpp */; };
+		EE417955295CC75600D2099F /* vm-writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE417953295CC75600D2099F /* vm-writer.cpp */; };
+		EE417959295CC77500D2099F /* jack-compiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE417957295CC77500D2099F /* jack-compiler.cpp */; };
+		EED5E10A295CCB2D001C8940 /* tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EED5E108295CCB2D001C8940 /* tokenizer.cpp */; };
+		EED5E10D295CCB40001C8940 /* compilation-engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EED5E10B295CCB40001C8940 /* compilation-engine.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE417940295CC69A00D2099F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE417942295CC69A00D2099F /* jack-compiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "jack-compiler"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE417945295CC69A00D2099F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EE41794F295CC72D00D2099F /* symbol-table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "symbol-table.cpp"; path = "symbol-table/symbol-table.cpp"; sourceTree = "<group>"; };
+		EE417950295CC72D00D2099F /* symbol-table.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = "symbol-table.hpp"; path = "symbol-table/symbol-table.hpp"; sourceTree = "<group>"; };
+		EE417952295CC73900D2099F /* symbol-table */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "symbol-table"; sourceTree = "<group>"; };
+		EE417953295CC75600D2099F /* vm-writer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "vm-writer.cpp"; path = "vm-writer/vm-writer.cpp"; sourceTree = "<group>"; };
+		EE417954295CC75600D2099F /* vm-writer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = "vm-writer.hpp"; path = "vm-writer/vm-writer.hpp"; sourceTree = "<group>"; };
+		EE417956295CC76100D2099F /* vm-writer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "vm-writer"; sourceTree = "<group>"; };
+		EE417957295CC77500D2099F /* jack-compiler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "jack-compiler.cpp"; path = "jack-compiler/jack-compiler.cpp"; sourceTree = "<group>"; };
+		EE417958295CC77500D2099F /* jack-compiler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = "jack-compiler.hpp"; path = "jack-compiler/jack-compiler.hpp"; sourceTree = "<group>"; };
+		EE41795A295CC98500D2099F /* jack-compiler */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "jack-compiler"; sourceTree = "<group>"; };
+		EED5E108295CCB2D001C8940 /* tokenizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = tokenizer.cpp; path = tokenizer/tokenizer.cpp; sourceTree = "<group>"; };
+		EED5E109295CCB2D001C8940 /* tokenizer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = tokenizer.hpp; path = tokenizer/tokenizer.hpp; sourceTree = "<group>"; };
+		EED5E10B295CCB40001C8940 /* compilation-engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "compilation-engine.cpp"; path = "compilation-engine/compilation-engine.cpp"; sourceTree = "<group>"; };
+		EED5E10C295CCB40001C8940 /* compilation-engine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = "compilation-engine.hpp"; path = "compilation-engine/compilation-engine.hpp"; sourceTree = "<group>"; };
+		EED5E10E295CCB57001C8940 /* ref.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ref.h; path = ref/ref.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE41793F295CC69A00D2099F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE417939295CC69A00D2099F = {
+			isa = PBXGroup;
+			children = (
+				EE417944295CC69A00D2099F /* jack-compiler */,
+				EE417943295CC69A00D2099F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE417943295CC69A00D2099F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE417942295CC69A00D2099F /* jack-compiler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE417944295CC69A00D2099F /* jack-compiler */ = {
+			isa = PBXGroup;
+			children = (
+				EE41795A295CC98500D2099F /* jack-compiler */,
+				EE417956295CC76100D2099F /* vm-writer */,
+				EE417952295CC73900D2099F /* symbol-table */,
+				EE417945295CC69A00D2099F /* main.cpp */,
+				EE41794F295CC72D00D2099F /* symbol-table.cpp */,
+				EE417950295CC72D00D2099F /* symbol-table.hpp */,
+				EE417953295CC75600D2099F /* vm-writer.cpp */,
+				EE417954295CC75600D2099F /* vm-writer.hpp */,
+				EE417957295CC77500D2099F /* jack-compiler.cpp */,
+				EE417958295CC77500D2099F /* jack-compiler.hpp */,
+				EED5E108295CCB2D001C8940 /* tokenizer.cpp */,
+				EED5E109295CCB2D001C8940 /* tokenizer.hpp */,
+				EED5E10B295CCB40001C8940 /* compilation-engine.cpp */,
+				EED5E10C295CCB40001C8940 /* compilation-engine.hpp */,
+				EED5E10E295CCB57001C8940 /* ref.h */,
+			);
+			path = "jack-compiler";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE417941295CC69A00D2099F /* jack-compiler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE417949295CC69A00D2099F /* Build configuration list for PBXNativeTarget "jack-compiler" */;
+			buildPhases = (
+				EE41793E295CC69A00D2099F /* Sources */,
+				EE41793F295CC69A00D2099F /* Frameworks */,
+				EE417940295CC69A00D2099F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jack-compiler";
+			productName = "jack-compiler";
+			productReference = EE417942295CC69A00D2099F /* jack-compiler */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE41793A295CC69A00D2099F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					EE417941295CC69A00D2099F = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EE41793D295CC69A00D2099F /* Build configuration list for PBXProject "jack-compiler" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE417939295CC69A00D2099F;
+			productRefGroup = EE417943295CC69A00D2099F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE417941295CC69A00D2099F /* jack-compiler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE41793E295CC69A00D2099F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED5E10A295CCB2D001C8940 /* tokenizer.cpp in Sources */,
+				EE417951295CC72D00D2099F /* symbol-table.cpp in Sources */,
+				EE417955295CC75600D2099F /* vm-writer.cpp in Sources */,
+				EED5E10D295CCB40001C8940 /* compilation-engine.cpp in Sources */,
+				EE417946295CC69A00D2099F /* main.cpp in Sources */,
+				EE417959295CC77500D2099F /* jack-compiler.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EE417947295CC69A00D2099F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EE417948295CC69A00D2099F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE41794A295CC69A00D2099F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6XMGXS656;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE41794B295CC69A00D2099F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6XMGXS656;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE41793D295CC69A00D2099F /* Build configuration list for PBXProject "jack-compiler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE417947295CC69A00D2099F /* Debug */,
+				EE417948295CC69A00D2099F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE417949295CC69A00D2099F /* Build configuration list for PBXNativeTarget "jack-compiler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE41794A295CC69A00D2099F /* Debug */,
+				EE41794B295CC69A00D2099F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE41793A295CC69A00D2099F /* Project object */;
+}
