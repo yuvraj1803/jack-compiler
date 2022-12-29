@@ -8,6 +8,26 @@
 #include "jack-compiler.hpp"
 
 
-jack_compiler::jack_compiler(string file){
+jack_compiler::jack_compiler(){}
+
+void jack_compiler::compile_file(string file){
+    
+    string vm_file = file.substr(0,file.size()-5) + ".vm"; // remove the .jack extention and add .vm extention
+    
+    tokenizer * tok = new tokenizer(file);
+    vm_writer * vmw = new vm_writer(vm_file);
+    symbol_table * sym = new symbol_table();
+    
+    
+    compilation_engine * CE = new compilation_engine(tok, sym, vmw);
+    CE->compilation_engine_begin();
+    CE->compilation_engine_end();
+    
+    free(CE);
+    free(tok);
+    free(vmw);
+    free(sym);
     
 }
+
+

@@ -7,6 +7,11 @@
 
 #include "symbol-table.hpp"
 
+
+symbol_table::symbol_table(){
+    
+}
+
 int symbol_table::var_count(int kind){ // count of variables with given kind.
     int count = 0;
     if(kind == ARG or kind == VAR){

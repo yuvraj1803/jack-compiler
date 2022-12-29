@@ -27,6 +27,10 @@ void vm_writer::flush_vm_writer(){
     
 }
 
+void vm_writer::get_vm_buffer(){
+    return vm_code_buffer;
+}
+
 void vm_writer::writePush(int segment, int index){
     string memory_segment;
     

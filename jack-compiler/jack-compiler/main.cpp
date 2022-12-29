@@ -9,17 +9,19 @@
 #include <filesystem>
 #include <vector>
 
+#include "jack-compiler/jack-compiler.hpp"
+
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-        
-    if(argc < 2){
-        cout << "./jack_compiler <path>\n";
-        exit(1);
-    }
+//
+//    if(argc < 2){
+//        cout << "./jack_compiler <path>\n";
+//        exit(1);
+//    }
     
-    string path = argv[1];
-    
+    string path = "/Users/boju/Desktop/nand2tetris/jack-compiler/jack-compiler/jack-compiler/test";
+    ;
     vector<string> jack_files;
     
     if(filesystem::is_directory(path)){
@@ -37,7 +39,13 @@ int main(int argc, const char * argv[]) {
         }
     }
     
+    jack_compiler * __JACK_COMPILER__ = new jack_compiler();
     
+    for(auto j_file : jack_files){
+        __JACK_COMPILER__->compile_file(j_file);
+    }
+    
+    free(__JACK_COMPILER__);
     
     
     return 0;

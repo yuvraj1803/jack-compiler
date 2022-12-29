@@ -45,6 +45,7 @@ public:
     void writeReturn(); // return from current subroutine
     
     void flush_vm_writer(); // flushes code from vm_code_buffer to the file. closes the file
+    vector<vector<string>> get_vm_buffer();
     
     
 private:
