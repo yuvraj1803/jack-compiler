@@ -9,9 +9,10 @@
 
 
 
-compilation_engine::compilation_engine(tokenizer T){
+compilation_engine::compilation_engine(tokenizer T, symbol_table ST){
     filename = T.getCurrentFilename();
     tok = &T;
+    sym = &ST;
     compilation_engine_begin();
 }
 
@@ -34,10 +35,6 @@ void compilation_engine::dumpVM(){
     
 }
 
-inline void compilation_engine::addCurrentToken(){
-    
-}
-
 vector<string> compilation_engine::getVMContent(){
     return VMContent;
 }
@@ -57,12 +54,51 @@ void compilation_engine::compilation_engine_begin(){
 }
 
 void compilation_engine::compileClass(){ //class : 'class' className { classVarDec*, subroutineDec* }
+    sym->reset_class_table(); // new class, new class-level symbol table
+    
+    tok->advance(); // className
+    tok->advance(); // {
+    
+    while(tok->getCurrentToken() == "field" or tok->getCurrentToken() == "static") compileClassVarDec(); // classVarDec*
+    while(tok->getCurrentToken() == "constructor" or tok->getCurrentToken() == "function" or tok->getCurrentToken() == "method") compileSubroutineDec(); // subroutineDec*
+    
+    tok->advance(); // }
     
 }
 
 void compilation_engine::compileClassVarDec(){ // ('static | 'field') type varName (','varName)* ';'
     
-   
+    int currentKind = NONE; // kind of variable
+    string current_type; // type of variable
+    
+    if(tok->getCurrentToken() == "static") currentKind = STATIC;
+    if(tok->getCurrentToken() == "field")  currentKind = FIELD;
+    
+    
+    tok->advance();
+    
+    current_type = tok->getCurrentToken();
+    
+    tok->advance();
+    
+    string varName = tok->getCurrentToken();
+    // add variable to the symbol_table
+    sym->define(varName, current_type, currentKind);
+    
+    tok->advance();
+    
+    while(tok->getCurrentToken() != ";"){ // process the list of variables
+        tok->advance(); // ','
+        
+        varName = tok->getCurrentToken();
+        
+        tok->advance();
+        
+        // add variable to the symbol_table
+        sym->define(varName, current_type, currentKind);
+    }
+    
+    tok->advance(); // ';'
     
 }
 
@@ -74,6 +110,11 @@ void compilation_engine::compileType(){
 
 void compilation_engine::compileSubroutineDec(){ // ('constructor' | 'function' | 'method') ('void' | type) subroutineName '(' parameterList ')' subroutineBody
     
+    // new subroutine, new subroutine-level symbol-table.
+    sym->reset_subroutine_table();
+    
+    
+    
     
 }
 
@@ -84,8 +125,30 @@ void compilation_engine::compileSubroutineBody(){ // '{' varDec* statements '}'
 
 void compilation_engine::compileVarDec(){ // 'var' type varName (',', varName)*';'
     
+    tok->advance(); // var
     
+    string current_type = tok->getCurrentToken(); // type
     
+    tok->advance(); // varName
+    
+    string varName = tok->getCurrentToken();
+    
+    sym->define(varName, current_type, VAR);
+    
+    tok->advance();
+    
+    while(tok->getCurrentToken() != ";"){
+        tok->advance(); // ','
+        
+        varName = tok->getCurrentToken(); // varName;
+        
+        sym->define(varName, current_type, VAR);
+        
+        tok->advance();
+        
+    }
+    
+    tok->advance(); // ';'
     
 }
 
@@ -154,6 +217,30 @@ void compilation_engine::compileSubroutineCall(){ // subroutineName '(' expressi
 }
 
 void compilation_engine::compileParameterList(){ // ((type varName) (',' type VarName)*)?
+    
+    // these are going to be your arguments in a subroutine call, hence we shall add them to the symbol table as ARG variables
+    
+    if(tok->getCurrentToken() == ")") return; // no parameters provided.
+    
+    string current_type = tok->getCurrentToken();
+    tok->advance();
+    
+    string varName = tok->getCurrentToken();
+    tok->advance();
+    
+    sym->define(varName, current_type, ARG);
+    
+    while(tok->getCurrentToken() != ")"){
+        tok->advance(); // ,
+        
+        current_type = tok->getCurrentToken();
+        tok->advance();
+        
+        varName = tok->getCurrentToken();
+        tok->advance();
+        
+        sym->define(varName, current_type, ARG);
+    }
     
     
 }

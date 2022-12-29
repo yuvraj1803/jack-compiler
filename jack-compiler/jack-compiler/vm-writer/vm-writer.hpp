@@ -44,7 +44,7 @@ public:
     void writeFunction(string name, int nLocals); // declare function nLocals(number of local variables)
     void writeReturn(); // return from current subroutine
     
-    void close_vm_writer(); // flushes code from vm_code_buffer to the file. closes the file
+    void flush_vm_writer(); // flushes code from vm_code_buffer to the file. closes the file
     
     
 private:

@@ -13,7 +13,7 @@ vm_writer::vm_writer(string file){
     filename = file;
 }
 
-void vm_writer::close_vm_writer(){
+void vm_writer::flush_vm_writer(){
     ofstream fileStream(filename);
     
     for(auto line : vm_code_buffer){
