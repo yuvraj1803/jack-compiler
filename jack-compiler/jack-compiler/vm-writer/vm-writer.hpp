@@ -32,7 +32,7 @@ class vm_writer{
     
 public:
     
-    vm_writer(string file); // constructor. sets the filename, resets the vm_code_buffer. passed file is a .vm file.
+    vm_writer(); // constructor. sets the filename, resets the vm_code_buffer. passed file is a .vm file.
     
     void writePush(int segment, int index); // push variable of index of given memory segment
     void writePop(int segment, int index); // pop variable of index of given memory segment
@@ -44,7 +44,6 @@ public:
     void writeFunction(string name, int nLocals); // declare function nLocals(number of local variables)
     void writeReturn(); // return from current subroutine
     
-    void flush_vm_writer(); // flushes code from vm_code_buffer to the file. closes the file
     vector<vector<string>> get_vm_buffer();
     
     

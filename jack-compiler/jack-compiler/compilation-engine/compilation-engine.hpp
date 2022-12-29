@@ -58,6 +58,9 @@ private:
     void compileSubroutineCall();
     void compileExpressionList();
     
+    int if_else_label_count = 0;
+    int while_label_count = 0;
+    
 };
 
 

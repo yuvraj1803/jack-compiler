@@ -9,23 +9,9 @@
 
 // this file is pretty self-explanatory provided, you are used to the hack vm.
 
-vm_writer::vm_writer(string file){
-    filename = file;
+vm_writer::vm_writer(){
 }
 
-void vm_writer::flush_vm_writer(){
-    ofstream fileStream(filename);
-    
-    for(auto line : vm_code_buffer){
-        for(auto element : line){
-            fileStream << element;
-        }
-        fileStream << "\n";
-    }
-    
-    fileStream.close();
-    
-}
 
 vector<vector<string>> vm_writer::get_vm_buffer(){
     return vm_code_buffer;
