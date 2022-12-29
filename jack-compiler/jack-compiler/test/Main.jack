@@ -1,5 +1,6 @@
 class Main{
 	function void main(){
-		
+		field int x;
+		static int y;
 	}
 }

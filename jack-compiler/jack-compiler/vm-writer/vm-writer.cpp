@@ -27,7 +27,7 @@ void vm_writer::flush_vm_writer(){
     
 }
 
-void vm_writer::get_vm_buffer(){
+vector<vector<string>> vm_writer::get_vm_buffer(){
     return vm_code_buffer;
 }
 
