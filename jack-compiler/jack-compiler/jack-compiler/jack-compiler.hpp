@@ -24,5 +24,10 @@ public:
     jack_compiler();
     void compile_file(string file); // compiles the input jack file and creates the .vm file
     
+public:
+    
+    
+    symbol_table * sym; // we need a common symbol table for all jack files, as we dont want to overwrite any variables in memory that belongs to an already processed file.
+    
 };
 #endif /* jack_compiler_hpp */

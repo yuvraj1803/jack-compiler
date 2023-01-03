@@ -68,7 +68,10 @@ public:
     void define(string name, string type, int kind); // adds the given variable into the appropriate symbol_table.
     void reset_subroutine_table(); // resets the class-level symbol table.
     void reset_class_table(); // resets the subroutine-level symbol table.
+    void reset_subroutine_info_table(); // reset the subroutine-info-table
     
+    
+    bool exists(string varName); // returns true if varName variable has been initialised yet. else returns false
     // --------------------------------------------
     
     
@@ -76,6 +79,7 @@ private:
     
     map<string, table_element> class_level_ST; // hash table for variables in the class scope.
     map<string, table_element> subroutine_level_ST; // hash table for variables in the subroutine scope.
+    map<string, table_element> subroutine_info_ST; //  hash table for info about declared subroutines
                     
     map<int,int> nextIndex; // maps nextIndex[kind] to the next available index for a variable of its kind. (remember 'kind' is an integer defined in "../ref/ref.h"
     

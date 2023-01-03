@@ -22,17 +22,17 @@ void vm_writer::writePush(int segment, int index){
     
     switch (segment) {
         case CONST:
-            memory_segment = "static";
+            memory_segment = "constant";
+            break;
+            
+        case FIELD:
+            memory_segment = "this";
             break;
             
         case ARG:
             memory_segment = "argument";
             break;
             
-        case LOCAL:
-            memory_segment = "local";
-            break;
-        
         case STATIC:
             memory_segment = "static";
             break;
@@ -54,6 +54,7 @@ void vm_writer::writePush(int segment, int index){
             break;
             
         default:
+            memory_segment = "local";
             break;
     }
     
@@ -72,15 +73,15 @@ void vm_writer::writePop(int segment, int index){
     
     switch (segment) {
         case CONST:
-            memory_segment = "static";
+            memory_segment = "constant";
+            break;
+            
+        case FIELD:
+            memory_segment = "this";
             break;
             
         case ARG:
             memory_segment = "argument";
-            break;
-            
-        case LOCAL:
-            memory_segment = "local";
             break;
         
         case STATIC:
@@ -104,6 +105,7 @@ void vm_writer::writePop(int segment, int index){
             break;
             
         default:
+            memory_segment = "local";
             break;
     }
     

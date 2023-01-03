@@ -23,6 +23,7 @@ enum types{
     BOOLEAN,
     CHAR,
     VOID,
+    NONVOID,
     LET,
     DO,
     IF,

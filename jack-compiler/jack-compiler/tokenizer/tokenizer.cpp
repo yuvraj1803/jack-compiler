@@ -25,21 +25,30 @@ tokenizer::tokenizer(string file){
         bool multiLineCommentActive = false; // we make this true if a multi-line comment was initialised but not closed.
         
         while(getline(fileStream, line)){
-            
+                        
             // removing spaces in the start of the string.
             
-            while(*line.begin() == ' ') line.erase(line.begin());
+            while(*line.begin() == ' ' or *line.begin() == '\r') line.erase(line.begin());
             
             // we have to deal with comments first.
             // as we process each line of the file, we parallely remove the comments.
             
             if(multiLineCommentActive){ // we check if the multi-lined comment ends in the current line.
                 int indexCommentFinished = (int)line.size(); // if it does, then we need to consider the code ahead of it.
+                
+                
+                bool endOfMultiLineCommentDetected = false; // if we find the end of a multi-line comment, we make this flag true
+                // by this we shall be able to scan for the code that succeeds the comment on the same line
+                
+                
                 for(int charIndex = 0;charIndex<(int)line.size();charIndex++){
                     if(charIndex + 1 < (int)line.size() and line[charIndex] == '*' and line[charIndex+1] == '/'){
                         multiLineCommentActive = false;
                         indexCommentFinished = charIndex + 2;
+                        endOfMultiLineCommentDetected = true;
                     }
+                    
+                    if(!endOfMultiLineCommentDetected) continue;
                     
                     // after we come out of the comment, we begin consider the code ahead for tokenisation.
                     
@@ -75,6 +84,8 @@ tokenizer::tokenizer(string file){
                         }
                     }
                 }
+                
+                if(multiLineCommentActive) continue;
                 // spaces and tabs are not removed if we are inside a string constant. to handle this, we use the insideString boolean value.
                 
                 if(!insideString and (line[charIndex] == ' ' or line[charIndex] == '\t')){ // removing spaces and tabs handled here.
@@ -161,18 +172,8 @@ void tokenizer::filterToken(vector<string> &seperatedTokens, string &s){
     
     if(s.empty()) return; // base case for the recursion. we just return if the string is empty.
     
-    //we have special names for  < > & " symbols. we dont want them to confuse the XML file processor.
-    if(s[0] == '<'){
-        seperatedTokens.push_back("&lt;");
-    }else if(s[0] == '>'){
-        seperatedTokens.push_back("&gt;");
-    }else if(s[0] == '&'){
-        seperatedTokens.push_back("&amp;");
-    }else if(s[0] == '\"'){
-        seperatedTokens.push_back("&quot;");
-    }else{
-        seperatedTokens.push_back(string(1,s[0])); // push the symbol into the tokenlist and remove it from the string
-    }
+    seperatedTokens.push_back(string(1,s[0])); // push the symbol into the tokenlist and remove it from the string
+
     s.erase(s.begin()); // erase the symbol from the string to continue processing it further
     
     filterToken(seperatedTokens, s); // recursively process the string
@@ -284,4 +285,9 @@ bool tokenizer::hasMoreTokens(){
 
 string tokenizer::getCurrentToken(){
     return currentToken;
+}
+
+void tokenizer::reset(){
+    nextTokenPosition = 1;
+    currentToken = tokenlist[0];
 }

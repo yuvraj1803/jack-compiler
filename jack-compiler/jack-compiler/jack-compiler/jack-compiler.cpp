@@ -8,7 +8,9 @@
 #include "jack-compiler.hpp"
 
 
-jack_compiler::jack_compiler(){}
+jack_compiler::jack_compiler(){
+    sym = new symbol_table();
+}
 
 void jack_compiler::compile_file(string file){
     
@@ -16,7 +18,6 @@ void jack_compiler::compile_file(string file){
     
     tokenizer * tok = new tokenizer(file);
     vm_writer * vmw = new vm_writer();
-    symbol_table * sym = new symbol_table();
     
     
     compilation_engine * CE = new compilation_engine(tok, sym, vmw);
@@ -27,7 +28,6 @@ void jack_compiler::compile_file(string file){
     free(CE);
     free(tok);
     free(vmw);
-    free(sym);
     
 }
 

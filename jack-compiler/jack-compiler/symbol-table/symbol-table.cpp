@@ -26,6 +26,14 @@ int symbol_table::var_count(int kind){ // count of variables with given kind.
         }
     }
     
+    if(kind == METHOD or kind == CONSTRUCTOR or kind == FUNCTION){
+        for(auto element : class_level_ST){
+            if(element.second.kind == kind) count++;
+        }
+    }
+    
+    
+    
     return count;
 }
 
@@ -33,6 +41,8 @@ int symbol_table::kind_of(string name){ // returns the kind of the variable 'nam
     if(class_level_ST.find(name) != class_level_ST.end()) return class_level_ST[name].kind;
     
     if(subroutine_level_ST.find(name) != subroutine_level_ST.end()) return subroutine_level_ST[name].kind;
+    
+    if(subroutine_info_ST.find(name) != subroutine_info_ST.end()) return subroutine_info_ST[name].kind;
     
     return NONE;
     
@@ -43,6 +53,8 @@ string symbol_table::type_of(string name){ // returns the type of varible 'name'
     
     if(subroutine_level_ST.find(name) != subroutine_level_ST.end()) return subroutine_level_ST[name].type;
     
+    if(subroutine_info_ST.find(name) != subroutine_info_ST.end()) return subroutine_info_ST[name].type;
+    
     return "INVALID"; // if the variable is not found.
     
 }
@@ -51,6 +63,8 @@ int symbol_table::index_of(string name){ // returns the index of variable 'name'
     if(class_level_ST.find(name) != class_level_ST.end()) return class_level_ST[name].index;
     
     if(subroutine_level_ST.find(name) != subroutine_level_ST.end()) return subroutine_level_ST[name].index;
+    
+    if(subroutine_info_ST.find(name) != subroutine_info_ST.end()) return subroutine_info_ST[name].index;
     
     return -1; // if the variable is not found.
     
@@ -68,6 +82,13 @@ void symbol_table::define(string name, string type, int kind){ // adds variable 
         class_level_ST[name].type = type;
         class_level_ST[name].kind = kind;
         class_level_ST[name].index = nextIndex[kind]++; // assign the next available index and increment it.
+    }
+    
+    if(kind == METHOD or kind == CONSTRUCTOR or kind == FUNCTION){
+        
+        subroutine_info_ST[name].type = type;
+        subroutine_info_ST[name].kind = kind;
+        subroutine_info_ST[name].index = nextIndex[kind]++;
     }
 }
 
@@ -90,4 +111,13 @@ void symbol_table::reset_subroutine_table(){ // sets all values to default in th
     
 }
 
+bool symbol_table::exists(string varName){
+    if(class_level_ST.find(varName) != class_level_ST.end()) return true;
+    if(subroutine_level_ST.find(varName) != subroutine_level_ST.end()) return true;
+    
+    return false;
+}
 
+void symbol_table::reset_subroutine_info_table(){ // resets the subroutine-info-table hash-map
+    subroutine_info_ST.clear();
+}

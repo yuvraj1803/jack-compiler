@@ -19,6 +19,14 @@
     
  */
 
+ struct subroutine_info{
+  
+    string name;
+    int kind;
+    int type;
+        
+};
+
 class compilation_engine{
     
 public:
@@ -36,16 +44,19 @@ private:
     symbol_table * sym; // pointer to the symbol_table we use for the current file.
     vm_writer * vmw; // pointer to the vm_writer class that we use for the current file.
     string filename; // the current file being processed.
+    string filename_stem; //  stem of the name of the file
     
-    vector<string> VMContent; // holds the content that will be dumped into the VM file at the end. 
+    vector<string> VMContent; // holds the content that will be dumped into the VM file at the end.
     
-        
+    
+    void scanSubroutines();
+    
     void compileClass();
     void compileClassVarDec();
     void compileSubroutineDec();
     void compileParameterList();
-    void compileSubroutineBody();
-    void compileVarDec();
+    void compileSubroutineBody(string subroutine_name, int subroutine_kind, bool void_subroutine);
+    int compileVarDec();
     void compileStatements();
     void compileStatement();
     void compileWhile();
@@ -56,11 +67,12 @@ private:
     void compileExpression();
     void compileTerm();
     void compileSubroutineCall();
-    void compileExpressionList();
+    int compileExpressionList();
     
     int if_else_label_count = 0;
     int while_label_count = 0;
     
+    subroutine_info current_subroutine_info; // has information about the current subroutine we are processing.
 };
 
 

@@ -1,8 +1,0 @@
-function Main.main 0
-push constant 0
-return
-function Main.add 4
-push argument 0
-push argument 1
-add
-return

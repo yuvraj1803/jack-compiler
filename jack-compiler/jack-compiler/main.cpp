@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
 //        exit(1);
 //    }
     
-    string path = "/Users/boju/Desktop/nand2tetris/jack-compiler/jack-compiler/jack-compiler/test";
+    string path = "/Users/boju/Desktop/nand2tetris/jack-compiler/jack-compiler/jack-compiler/test/Square";
     ;
     vector<string> jack_files;
     
@@ -41,10 +41,11 @@ int main(int argc, const char * argv[]) {
     
     jack_compiler * __JACK_COMPILER__ = new jack_compiler();
     
+   // __JACK_COMPILER__->compile_file("/Users/boju/Desktop/nand2tetris/jack-compiler/jack-compiler/jack-compiler/test/Pong/Bat.jack");
+    
     for(auto j_file : jack_files){
         __JACK_COMPILER__->compile_file(j_file);
     }
-    
     free(__JACK_COMPILER__);
     
     

@@ -42,6 +42,9 @@ public:
     string getCurrentToken(); // returns the current token pointed by the tokenizer.
     void dumpXML();
     string getCurrentFilename(); // returns the current file that is begin processed.
+    
+    void reset(); // resets the changes made by the advance() and retreat() functions.
+    
 private:
     
     vector<string> tokenlist; // list of all tokens
