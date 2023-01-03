@@ -14,14 +14,14 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-//
-//    if(argc < 2){
-//        cout << "./jack_compiler <path>\n";
-//        exit(1);
-//    }
+
+   if(argc < 2){
+       cout << "./jack_compiler <path>\n";
+       exit(1);
+   }
     
-    string path = "/Users/boju/Desktop/nand2tetris/jack-compiler/jack-compiler/jack-compiler/test/Square";
-    ;
+    string path = argv[1];
+    
     vector<string> jack_files;
     
     if(filesystem::is_directory(path)){
