@@ -4,7 +4,7 @@ The Jack Compiler is a software tool which converts code written in the **Jack P
 
 The Jack Language is a simple object-based language which can be used to write high-level programs.
 
-The Compiler converts the Jack code into VM code, which is then passed to the VM Translator, which then converts the code into the assemly code.
+The Compiler converts the Jack code into VM code, which is then passed to the VM Translator, which then converts the code into the assembly code.
 
 This Assembly code is passed on to the Hack Assembler, which finally generates the machine code.
 
