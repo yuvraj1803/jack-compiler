@@ -75,17 +75,12 @@ void compilation_engine::dumpVM(){
     
     // remove .jack from the filename;
     
-    string outputFile = "";
-    for(auto c: filename){
-        if(c == '.') break;
-        outputFile += c;
-    }
+    string outputFile = filename.substr(0, filename.size() - 5);
     outputFile += ".vm";
     ofstream outputFileStream(outputFile);
     for(auto line : VMContent){
         outputFileStream << line << '\n';
-    }
-    
+    } 
     outputFileStream.close();
     
 }
