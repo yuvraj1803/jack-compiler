@@ -28,47 +28,43 @@ pop pointer 0
 push this 1
 push constant 1
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 0
 call Square.moveUp 1
 pop temp 0
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push this 1
 push constant 2
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 0
 call Square.moveDown 1
 pop temp 0
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push this 1
 push constant 3
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 0
 call Square.moveLeft 1
 pop temp 0
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push this 1
 push constant 4
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 0
 call Square.moveRight 1
 pop temp 0
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push constant 5
 call Sys.wait 1
 pop temp 0
@@ -100,76 +96,69 @@ label WHILE_END_2
 push local 0
 push constant 81
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 0
 not
 pop local 1
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push local 0
 push constant 90
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 0
 call Square.decSize 1
 pop temp 0
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push local 0
 push constant 88
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 0
 call Square.incSize 1
 pop temp 0
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push local 0
 push constant 131
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 1
 pop this 1
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push local 0
 push constant 133
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 2
 pop this 1
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push local 0
 push constant 130
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 3
 pop this 1
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 push local 0
 push constant 132
 eq
-not
-if-goto IF_FALSE1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 4
 pop this 1
-goto IF_END1
 label IF_FALSE1
-label IF_END1
 label WHILE_2
 push local 0
 push constant 0

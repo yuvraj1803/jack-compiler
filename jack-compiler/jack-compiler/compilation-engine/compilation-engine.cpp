@@ -305,21 +305,29 @@ void compilation_engine::compileIf(){ // 'if' '(' expression ')' '{' statements 
     tok->advance(); // if
     tok->advance(); // (
     compileExpression(); // expression
-    vmw->writeArithmetic(NOT); // not (negate the result of the expression)
     tok->advance(); // )
     tok->advance(); // {
     
+        
+    vmw->writeIf("IF_TRUE" + to_string(if_else_label_count)); // if-goto IF_TRUEx
     
-    vmw->writeIf("IF_FALSE" + to_string(if_else_label_count)); // if-goto IF_TRUE_x
+    
+    vmw->writeGoto("IF_FALSE" + to_string(if_else_label_count)); // goto IF_FALSEx
+    
+    vmw->writeLabel("IF_TRUE" + to_string(if_else_label_count)); // label for the if statement's body
+    
     compileStatements(); // statements
-    
-    vmw->writeGoto("IF_END" + to_string(if_else_label_count)); // goto IF_FALSE_x
-    
-    vmw->writeLabel("IF_FALSE" + to_string(if_else_label_count)); // label for the if statement's body
     
     tok->advance(); // }
     
+    bool else_statement_present = false;
+    
     if(tok->getCurrentToken() == "else"){
+        else_statement_present = true;
+        
+        vmw->writeGoto("IF_END" + to_string(if_else_label_count)); // goto IF_ENDx
+        vmw->writeLabel("IF_FALSE" + to_string(if_else_label_count)); // label IF_FALSEx
+        
         tok->advance(); // else
         tok->advance(); // {
         compileStatements();
@@ -327,7 +335,8 @@ void compilation_engine::compileIf(){ // 'if' '(' expression ')' '{' statements 
     }
     
     
-    vmw->writeLabel("IF_END" + to_string(if_else_label_count));// label to jump to the rest of the code
+    if(else_statement_present) vmw->writeLabel("IF_END" + to_string(if_else_label_count));// label to jump to the rest of the code
+    else vmw->writeLabel("IF_FALSE" + to_string(if_else_label_count));
     
     if_else_label_count--;
 }
