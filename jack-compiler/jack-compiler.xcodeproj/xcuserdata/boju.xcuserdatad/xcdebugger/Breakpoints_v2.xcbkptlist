@@ -73,8 +73,8 @@
             filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "jack_compiler::compile_file(file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -105,24 +105,8 @@
             filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "jack_compiler::compile_file(file)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8A731781-DF47-43CD-B8E5-380C79084471"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "jack_compiler::compile_file(file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -169,8 +153,8 @@
             filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "jack_compiler::compile_file(file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -185,8 +169,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "458"
-            endingLineNumber = "458"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
             landmarkName = "compilation_engine::compileExpression()"
             landmarkType = "7">
          </BreakpointContent>
@@ -201,8 +185,8 @@
             filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "jack_compiler::compile_file(file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -265,8 +249,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "409"
-            endingLineNumber = "409"
+            startingLineNumber = "413"
+            endingLineNumber = "413"
             landmarkName = "compilation_engine::compileLet()"
             landmarkType = "7">
          </BreakpointContent>
@@ -281,8 +265,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "compilation_engine::compileLet()"
             landmarkType = "7">
          </BreakpointContent>
@@ -361,8 +345,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "695"
-            endingLineNumber = "695"
+            startingLineNumber = "699"
+            endingLineNumber = "699"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -377,8 +361,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "636"
-            endingLineNumber = "636"
+            startingLineNumber = "640"
+            endingLineNumber = "640"
             landmarkName = "compilation_engine::compileExpressionList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -393,8 +377,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "595"
-            endingLineNumber = "595"
+            startingLineNumber = "599"
+            endingLineNumber = "599"
             landmarkName = "compilation_engine::compileTerm()"
             landmarkType = "7">
          </BreakpointContent>
@@ -409,8 +393,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "426"
-            endingLineNumber = "426"
+            startingLineNumber = "430"
+            endingLineNumber = "430"
             landmarkName = "compilation_engine::compileDo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -425,8 +409,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "697"
-            endingLineNumber = "697"
+            startingLineNumber = "701"
+            endingLineNumber = "701"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -441,8 +425,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "649"
-            endingLineNumber = "649"
+            startingLineNumber = "653"
+            endingLineNumber = "653"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -457,8 +441,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
+            startingLineNumber = "500"
+            endingLineNumber = "500"
             landmarkName = "compilation_engine::compileExpression()"
             landmarkType = "7">
          </BreakpointContent>
@@ -489,8 +473,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "437"
-            endingLineNumber = "437"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
             landmarkName = "compilation_engine::compileReturn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -553,8 +537,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "485"
+            endingLineNumber = "485"
             landmarkName = "compilation_engine::compileExpression()"
             landmarkType = "7">
          </BreakpointContent>
@@ -569,8 +553,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "544"
-            endingLineNumber = "544"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "compilation_engine::compileTerm()"
             landmarkType = "7">
          </BreakpointContent>
@@ -579,6 +563,38 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "34ECB90B-26C5-4AC8-BCA1-E335125C598F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
+            landmarkName = "compilation_engine::compileTerm()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A74FE2B8-3E38-4B9F-908A-4712C47CFD60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "554"
+            endingLineNumber = "554"
+            landmarkName = "compilation_engine::compileTerm()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2452BE06-C1AA-40B8-91A0-5262BE22E128"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -594,38 +610,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A74FE2B8-3E38-4B9F-908A-4712C47CFD60"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "550"
-            endingLineNumber = "550"
-            landmarkName = "compilation_engine::compileTerm()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2452BE06-C1AA-40B8-91A0-5262BE22E128"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "541"
-            endingLineNumber = "541"
-            landmarkName = "compilation_engine::compileTerm()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "36DADEE5-751B-479A-9ED7-D348C38D7F0D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -633,10 +617,10 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "376"
+            endingLineNumber = "376"
+            landmarkName = "compilation_engine::compileWhile()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -649,8 +633,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
+            startingLineNumber = "357"
+            endingLineNumber = "357"
             landmarkName = "compilation_engine::compileWhile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -681,8 +665,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "603"
-            endingLineNumber = "603"
+            startingLineNumber = "607"
+            endingLineNumber = "607"
             landmarkName = "compilation_engine::compileTerm()"
             landmarkType = "7">
          </BreakpointContent>
@@ -697,8 +681,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
             landmarkName = "compilation_engine::compileWhile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -713,8 +697,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "compilation_engine::compileWhile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -761,8 +745,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "622"
-            endingLineNumber = "622"
+            startingLineNumber = "626"
+            endingLineNumber = "626"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -777,8 +761,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "670"
-            endingLineNumber = "670"
+            startingLineNumber = "674"
+            endingLineNumber = "674"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -787,14 +771,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "55365ED8-B72D-4DEA-BE53-2AA40423AC05"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "jack_compiler::compile_file(file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -809,8 +793,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "684"
-            endingLineNumber = "684"
+            startingLineNumber = "688"
+            endingLineNumber = "688"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -825,8 +809,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "671"
-            endingLineNumber = "671"
+            startingLineNumber = "675"
+            endingLineNumber = "675"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -841,8 +825,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "691"
-            endingLineNumber = "691"
+            startingLineNumber = "695"
+            endingLineNumber = "695"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -857,8 +841,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "682"
-            endingLineNumber = "682"
+            startingLineNumber = "686"
+            endingLineNumber = "686"
             landmarkName = "compilation_engine::compileSubroutineCall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -873,8 +857,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "424"
-            endingLineNumber = "424"
+            startingLineNumber = "428"
+            endingLineNumber = "428"
             landmarkName = "compilation_engine::compileDo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -889,8 +873,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "449"
-            endingLineNumber = "449"
+            startingLineNumber = "453"
+            endingLineNumber = "453"
             landmarkName = "compilation_engine::compileReturn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -921,8 +905,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "640"
-            endingLineNumber = "640"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
             landmarkName = "compilation_engine::compileExpressionList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -937,8 +921,8 @@
             filePath = "jack-compiler/compilation-engine/compilation-engine.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
             landmarkName = "compilation_engine::compileWhile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1037,6 +1021,38 @@
             endingLineNumber = "48"
             landmarkName = "main(argc, argv)"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2947801C-5681-444F-BEC2-3E8216D01402"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "jack_compiler::compile_file(file)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6BA7526-E777-4451-83DF-139EC34ED944"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "jack-compiler/jack-compiler/jack-compiler.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "jack_compiler::compile_file(file)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

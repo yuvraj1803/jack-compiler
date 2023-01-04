@@ -302,6 +302,8 @@ void compilation_engine::compileIf(){ // 'if' '(' expression ')' '{' statements 
     
     if_else_label_count++; //since the if-else statements can be nested, and compiled in a recursive fashion, we need unique labels, hence we increment this.
     
+    max_if_label_used = max(max_if_label_used, if_else_label_count);
+    
     tok->advance(); // if
     tok->advance(); // (
     compileExpression(); // expression
@@ -344,6 +346,8 @@ void compilation_engine::compileIf(){ // 'if' '(' expression ')' '{' statements 
 void compilation_engine::compileWhile(){ // 'while' '(' expression ')' '{' statements '}'
     
     while_label_count++; // since the while statements can be nested, and compiled in a recursive fashion, we need unique labels, hence we increment this.
+    
+    max_while_label_used = max(max_while_label_used, while_label_count);
     
     tok->advance(); //  while
     tok->advance(); // (

@@ -38,6 +38,11 @@ public:
     void compilation_engine_begin(); // starts generating VM code for the processed tokens.
     void compilation_engine_end(); // frees all the defined structures. flushes code into .vm file
     
+    int if_else_label_count;
+    int while_label_count;
+    int max_if_label_used = 0; //  max index of label used for if statements
+    int max_while_label_used = 0; // max index of label used for while statements
+    
 private:
     
     tokenizer * tok; // pointer to the tokenizer that has processed the current file.
@@ -69,8 +74,8 @@ private:
     void compileSubroutineCall();
     int compileExpressionList();
     
-    int if_else_label_count = 0;
-    int while_label_count = 0;
+
+
     
     subroutine_info current_subroutine_info; // has information about the current subroutine we are processing.
 };

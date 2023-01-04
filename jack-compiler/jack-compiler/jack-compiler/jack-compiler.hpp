@@ -26,6 +26,8 @@ public:
     
 public:
     
+    int common_if_else_label_count = -1; // common for all files in order to avoid clashes
+    int common_while_label_count = -1;
     
     symbol_table * sym; // we need a common symbol table for all jack files, as we dont want to overwrite any variables in memory that belongs to an already processed file.
     
